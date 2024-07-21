@@ -6,7 +6,6 @@
   --gray-300: #5d5959;
   --gray-400: #cbd5e0;
   --white: #ffffff;
-  --highlight: #ffdf00; /* Exemplo de nova variável para destaque */
 }
 
 /* Reset */
@@ -22,29 +21,21 @@ body {
   background-color: var(--background);
   margin: 0;
   font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 /* Container principal */
 .container {
-  width: 90%; /* Ajusta o container para ocupar 90% da largura da tela */
-  max-width: 1200px;
-  margin: 0 auto; /* Centraliza o container */
+  width: 100%;
+  margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(7, 1fr);
   gap: 2rem;
-  padding: 0 2rem;
 }
 
 /* Seção esquerda */
 .left-section {
   grid-column: span 2;
   padding: 5rem;
-  background-color: var(--dark-desaturated-blue);
-  border-radius: 10px;
 }
 
 /* Perfil */
@@ -194,7 +185,7 @@ a:hover {
 .education-contents,
 .awards-contents {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   padding-bottom: 2rem;
   color: var(--white);
 }
@@ -217,13 +208,13 @@ a:hover {
 }
 
 /* Media queries */
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;
   }
 
   .contact-info ul li {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .name,
@@ -239,22 +230,19 @@ a:hover {
   .education-contents,
   .awards-contents,
   .subTitle {
-    font-size: 0.875rem;
-  }
-
-  .right-section {
-    border-radius: 0;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 768px) {
   .container {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
   .contact-info ul li {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .skills ul li p {
@@ -266,8 +254,8 @@ a:hover {
   .profession,
   .left-title,
   .right-title {
-    font-size: 0.875rem;
-    padding: 0.5rem 0;
+    font-size: 1rem;
+    padding: 1rem 0;
   }
 
   .description,
@@ -280,5 +268,79 @@ a:hover {
 
   .right-section {
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .profession {
+    font-size: 1.125rem;
+  }
+
+  .left-title {
+    font-size: 1.125rem;
+  }
+
+  .right-section {
+    border-radius: 0;
+  }
+
+  .right-title {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  .contact-info ul li {
+    font-size: 1rem;
+  }
+
+  .contact-info ul li i {
+    font-size: 1rem;
+  }
+
+  .skills ul li p {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 1.125rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .subTitle {
+    font-size: 1.125rem;
+  }
+
+  .left-section {
+    border-bottom: none;
+  }
+
+  .contact-info ul li i {
+    font-size: 1rem;
+  }
+
+  .skills ul li p {
+    padding: 0.4rem 0;
   }
 }

@@ -3,13 +3,12 @@
   --dark-desaturated-blue: #1b1e34;
   --very-dark-blue: #2c2e43;
   --soft-orange: #5ca152;
-  --gray-300: #888585;
+  --gray-300: #5d5959;
   --gray-400: #cbd5e0;
   --white: #ffffff;
 }
 
 /* Reset */
-
 * {
   border: 0;
   padding: 0;
@@ -20,26 +19,26 @@
 
 body {
   background-color: var(--background);
+  margin: 0;
+  font-size: 1rem;
 }
 
+/* Container principal */
 .container {
   width: 100%;
-  height: 100%;
-  margin: 2rem auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 2rem;
 }
 
-/* Left section */
-
+/* Seção esquerda */
 .left-section {
   grid-column: span 2;
-  border-bottom: none;
-  padding: 5rem 5rem;
+  padding: 5rem;
 }
 
-/* Profile */
-
+/* Perfil */
 .profile {
   width: 100%;
   border-bottom: 2px solid var(--gray-300);
@@ -59,8 +58,8 @@ body {
 .name,
 .profession {
   color: var(--gray-300);
-  font-size: 18px;
-  letter-spacing: 2px;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
   text-align: center;
   font-weight: bold;
   padding: 1rem 0;
@@ -68,8 +67,8 @@ body {
 
 .left-title {
   color: var(--white);
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 1.25rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -77,12 +76,10 @@ body {
   padding-top: 3rem;
 }
 
-/* Contact info */
-
-/* .contact-info {
-  padding: 8px;
-  border-bottom: 2px solid var(--gray-300);
-} */
+/* Informações de contato */
+.contact-info {
+  padding: 7px;
+}
 
 .contact-info ul {
   padding-top: 1.5rem;
@@ -94,33 +91,25 @@ body {
   align-items: center;
   color: var(--gray-300);
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .contact-info ul li i {
   padding-right: 1rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--white);
 }
 
 a {
   color: var(--gray-300);
-}
-
-a:link {
-  width: 100%;
-  display: flex;
-  gap: 8px;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Skills */
-
-.contact-info,
+/* Habilidades */
 .skills {
   padding: 7px;
 }
@@ -131,18 +120,16 @@ a:hover {
 
 .skills .box {
   width: 100%;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   position: relative;
-  grid-template-columns: 150px 1fr;
   display: grid;
-  flex-direction: row;
-  justify-content: center;
+  grid-template-columns: 150px 1fr;
   align-items: center;
 }
 
 .skills .box h4 {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--gray-300);
   font-weight: 500;
 }
@@ -150,7 +137,7 @@ a:hover {
 .skills .box .percent {
   position: relative;
   width: 100%;
-  height: 10px;
+  height: 0.625rem;
   background: var(--white);
 }
 
@@ -162,43 +149,38 @@ a:hover {
   background: var(--dark-desaturated-blue);
 }
 
-/* Right section */
-
+/* Seção direita */
 .right-section {
   grid-column: span 5;
-  height: 100%;
   background-color: var(--soft-orange);
-  border-radius: 0px 60px 0px 0px;
-  padding: 2rem 2rem;
+  border-radius: 0 60px 0 0;
+  padding: 2rem;
 }
 
-/* About */
-
+/* Sobre */
 .gap {
   padding-bottom: 2rem;
 }
 
 .right-title {
   color: var(--very-dark-blue);
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-size: 2.5rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
   align-items: center;
   padding: 2rem 0;
-  position: relative;
 }
 
 .description {
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 1.125rem;
+  letter-spacing: 0.0625rem;
   line-height: 2rem;
   color: var(--white);
 }
 
-/* Experience, Education and Awards */
-
+/* Experiência, Educação e Prêmios */
 .experience-contents,
 .education-contents,
 .awards-contents {
@@ -209,32 +191,17 @@ a:hover {
 }
 
 .subTitle {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: var(--gray-300);
   padding-bottom: 0.4rem;
 }
 
 .description {
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 2rem;
-}
-
-.subTitle {
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gray-300);
-  padding-bottom: 0.4rem;
-}
-
-.description {
-  font-size: 16px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
   line-height: 1.5rem;
   border-left: 3px solid var(--gray-400);
   padding-left: 5px;
@@ -242,19 +209,19 @@ a:hover {
 
 /* Media queries */
 @media screen and (max-width: 1024px) {
-  .contact-info ul li {
-    font-size: 12px;
+  .container {
+    grid-template-columns: 1fr;
   }
 
-  .contact-info ul li i {
-    font-size: 16px;
+  .contact-info ul li {
+    font-size: 0.75rem;
   }
 
   .name,
   .profession,
   .left-title,
   .right-title {
-    font-size: 18px;
+    font-size: 1rem;
     padding: 1rem 0;
   }
 
@@ -263,24 +230,23 @@ a:hover {
   .education-contents,
   .awards-contents,
   .subTitle {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   .contact-info ul li {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .skills ul li p {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0.4rem 0;
   }
 
@@ -288,7 +254,7 @@ a:hover {
   .profession,
   .left-title,
   .right-title {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1rem 0;
   }
 
@@ -297,75 +263,73 @@ a:hover {
   .education-contents,
   .awards-contents,
   .subTitle {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .right-section {
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0;
   }
 }
 
 @media screen and (max-width: 425px) {
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .container {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
 
   .name {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .profession {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .left-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .right-section {
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0;
   }
 
   .right-title {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1rem 0;
   }
 
   .contact-info ul li {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .contact-info ul li i {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .skills ul li p {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0.4rem 0;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 
   .subTitle {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .subTitle {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .left-section {
@@ -373,7 +337,7 @@ a:hover {
   }
 
   .contact-info ul li i {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .skills ul li p {
